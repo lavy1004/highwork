@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+/*
+ * File       : layout.css
+ * Author     : Lyze (Jhin)
+ *
+ * SUMMARY:
+ * 01) introduce custom layout
+ * 02) 1024px
+ * 03) 768px
+ */
+
+/* **************************************** *
+ * min-width: 1024px
+ * **************************************** */
+@media (max-width: 1200px) {
+  header .gnb {
+    display: none;
+  }
+  header .content-layout-fixed {
+    padding-left: 0;
+  }
+  #menu_btn {
+    display: block;
+  }
+  .right-box {
+    width: 45%;
+    margin-left: 50px;
+  }
+  .left-box {
+    width: 50%;
+  }
+}
+/* **************************************** *
+ * 768px
+ * **************************************** */
+@media (max-width: 768px) {
+  section > div > p {
+    width: auto;
+  }
+
+  .content-layout {
+    padding: 0 30px;
+  }
+  header .content-layout-fixed {
+    padding-left: 0;
+
+    min-width: 0;
+  }
+  .nav-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #fff;
+    transition: all 0.2s ease;
+  }
+  .nav-wrapper ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .nav-wrapper ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .nav-wrapper ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+  }
+  .nav-wrapper ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+  .nav-wrapper ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+  }
+  .nav-wrapper ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+  }
+  .nav-wrapper ul li:not(:first-child) {
+    margin-left: 0;
+  }
+  .nav-wrapper ul li a {
+    line-height: 46px;
+    padding: 10px 24px;
+    opacity: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    transform: translateX(-20px);
+    transition: all 0.2s ease;
+  }
+  .nav-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+  }
+  .nav-btn i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    margin-left: 14px;
+  }
+  .nav-btn i:nth-child(1) {
+    margin-top: 16px;
+  }
+  .nav-btn i:nth-child(2) {
+    margin-top: 4px;
+    opacity: 1;
+  }
+  .nav-btn i:nth-child(3) {
+    margin-top: 4px;
+  }
+  #nav:checked + .nav-btn {
+    transform: rotate(45deg);
+  }
+  #nav:checked + .nav-btn i {
+    background: white;
+    transition: transform 0.2s ease;
+  }
+  #nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+  }
+  #nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+  }
+  #nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+  }
+  #nav:checked ~ .nav-wrapper {
+    display: block;
+    z-index: 9990;
+    background: #0a3678;
+  }
+  #nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  #menu_btn {
+    display: block;
+  }
+
+  .menu-logo {
+    height: 55px;
+    background-size: contain;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -90px;
+    width: 180px;
+    height: 57px;
+    background: url(../images/logo.png) no-repeat 0 0;
+  }
+
+  header {
+    height: 537px;
+  }
+  header .underline {
+    height: auto;
+    z-index: 3;
+    position: fixed;
+    min-width: 1111px;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  header .logo {
+    height: 30px;
+    background-size: contain;
+  }
+  header .relative {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  header .gnb {
+    display: none;
+  }
+  header .btn {
+    display: none;
+  }
+  .btn-lang {
+    padding: 15px 15px;
+    font-size: 12px;
+  }
+
+  .img-box {
+    z-index: 0;
+    top: 204px;
+    right: 5px;
+    width: 97%;
+    position: absolute;
+    margin-right: 0;
+    display: block;
+  }
+
+  .txt-box {
+    margin: 0 auto;
+    padding-top: 120px;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+  .txt-box h1 {
+    font-size: 20px;
+    line-height: unset;
+  }
+  .txt-box p {
+    font-size: 14px;
+  }
+
+  section h2.deco {
+    width: auto;
+  }
+  .home {
+    z-index: 1;
+  }
+
+  .btn-group {
+    margin-top: 46px;
+  }
+
+  .card-list {
+    width: auto;
+  }
+  .card-list li {
+    margin-right: 0;
+    margin: 0 auto;
+    float: none;
+    width: calc(100% - 30px);
+    margin-bottom: 30px !important;
+  }
+
+  .sub-txt {
+    width: auto;
+  }
+  .icon-list {
+    width: auto;
+  }
+  .icon-list li {
+    width: calc(50% - 12px);
+    margin-right: 0;
+    min-height: 260px;
+    margin-top: 30px;
+  }
+  .circle {
+    width: 100%;
+  }
+  .cir-txt {
+    margin-top: 0;
+  }
+  .cir-txt p {
+    font-weight: 500;
+    font-size: 3vw;
+  }
+
+  .step-card-list {
+    margin-top: 25px;
+  }
+
+  .left-box {
+    display: inline-block;
+    width: 100%;
+  }
+  .right-box {
+    position: static;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .left-box-r {
+    position: static;
+    margin-left: 0;
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+  .right-box-r {
+    position: static;
+    text-align: center;
+  }
+  .fif-tit {
+    width: 100%;
+  }
+  .fif-txt {
+    width: 100%;
+    text-align: justify;
+  }
+  .fif-txt2 {
+    width: 100%;
+  }
+  .fif-tit2 {
+    width: 100%;
+  }
+
+  .timeline-img-box {
+    display: none;
+  }
+  .timeline-txt-box {
+    display: block !important;
+  }
+
+  .time-list li {
+    padding: 10px;
+    padding-left: 45px;
+    padding-right: 25px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .time-list li:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    left: 20px;
+    top: 38.5px;
+  }
+
+  .time-list li div {
+    background: #fff;
+    padding: 20px 18px;
+    border-radius: 10px;
+  }
+  .time-list li div h3 {
+    color: #174a98;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4.5vw;
+    margin-bottom: 10px;
+  }
+  .time-list li div p {
+    font-size: 2.5vw;
+    color: #333;
+  }
+  .time-list li div strong {
+    font-weight: 600;
+  }
+  .pic-list {
+    width: 100%;
+  }
+  .pic-list li {
+    float: left;
+    width: 50%;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-bottom: 25px;
+    min-height: 290px;
+  }
+  .pic-list.type2 {
+    width: 100%;
+  }
+  .pic-list.type2 li {
+    width: 50%;
+  }
+  .part-list {
+    width: auto;
+  }
+  .part-list li {
+    float: left;
+    width: calc(50% - 30px);
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+  }
+  .foot-txt {
+    font-size: 10px;
+  }
+}

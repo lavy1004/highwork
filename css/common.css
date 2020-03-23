@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/*
+ * File       : common.css
+ * Author     : Lyze (Jhin)
+ *
+ * SUMMARY:
+ * 1) Common css
+ */
+
+.float-area {
+  *zoom: 1;
+}
+.float-area:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.float-area .fl {
+  float: left;
+}
+.float-area .fr {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+
+.content-layout {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+/*폰트*/
+
+/*color*/
+.bg-grd {
+  background: linear-gradient(
+    90deg,
+    rgba(66, 178, 190, 1) 0%,
+    rgba(23, 74, 152, 1) 100%
+  );
+}
+.btn-navy {
+  background-color: #174a98;
+}
+.fc-navy {
+  color: #174a98;
+}
+
+/*margin, padding, align*/
+.mr10 {
+  margin-right: 10px !important;
+}
+.mr15 {
+  margin-right: 15px !important;
+}
+
+.mt15 {
+  margin-top: 15px !important;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+.mt100 {
+  margin-top: 100px !important;
+}
+.mt200 {
+  margin-top: 200px !important;
+}
+
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.mb80 {
+  margin-bottom: 80px !important;
+}
+
+.txt-center {
+  text-align: center !important;
+}
+.m-auto {
+  margin: 0 auto !important;
+}
+
+.hidden {
+  display: none;
+}
+.nav-wrapper {
+  display: none;
+}
+#menu_btn {
+  display: none;
+}
